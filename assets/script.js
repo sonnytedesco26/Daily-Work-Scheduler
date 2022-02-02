@@ -9,7 +9,7 @@ $("#currentDay").html(moment().format('dddd, MMMM Do YYYY'));
 }*/
 
 $(document).ready(function(){
-    $(".saveBtn").on("click", function(){
+    $(".saveBtn").click( function(){
         var time = $(this).parent().attr("id");
         var task = $(this).siblings(".description").val();
 
