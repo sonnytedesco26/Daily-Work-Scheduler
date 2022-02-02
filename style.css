@@ -76,6 +76,20 @@ textarea{
 }
 
 @media screen and (max-width: 575px) {
+ .saveBtn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+ }
+ 
+  .time-block{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+ }
 
-  
+ .hour{
+   padding:30px;
+ }
 }
