@@ -1,15 +1,20 @@
-$("#currentDay").html(moment().format('dddd, MMMM Do YYYY, h:mm:ss a'));
+$("#currentDay").html(moment().format('dddd, MMMM Do YYYY'));
 
 
-function saveClick(){
+/*function saveClick(){
     var time = $(this).parent().attr("id");
     var task = $(this).siblings(".description").val();
 
     localStorage.setItem(time, task);
-}
+}*/
 
 $(document).ready(function(){
-    $(".saveBtn").on("click", saveClick())
+    $(".saveBtn").on("click", function(){
+        var time = $(this).parent().attr("id");
+        var task = $(this).siblings(".description").val();
+
+        localStorage.setItem(time, task);
+    })
 
     function timer(){
         var currentTime = moment().hour();
